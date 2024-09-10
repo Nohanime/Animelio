@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding: auto;
+  bottom: auto;
+}
+
+header {
+  padding-bottom: 0.7rem;
+}
+
+body {
+  background-color: #111;
+  font-size: 16px;
+}
+
+img {
+  border-radius: 8px;
+  vertical-align: middle;
+  display: flex;
+}
+
+.column:hover,
+.mySlides:hover img {
+  transition: all ease 0.3s;
+  filter: blu(8px);
+  filter: drop-shadow(0 0 24px #fff);
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+li a:hover {
+  transition: all ease 0.3s;
+  background-color: #6457A6;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #5770a6;
+}
+
+.footer a:hover {
+  transition: all ease 0.3s;
+  color: #6457A6;
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.logo {
+  float: left;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  display: flex;
+}
+
+.mySlides {
+  cursor: pointer;
+  display: flex;
+  width: auto;
+  margin: auto;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: relative;
+  margin-top: -15%;
+  width: auto;
+  padding: 16px 16px 11px 16px;
+  user-select: none;
+  border-radius: 8px;
+}
+
+.next {
+  float: right;
+}
+
+.prev {
+  float: left;
+}
+
+.prev:hover,
+.next:hover {
+  transition: 0.3s ease all;
+  background-color: rgb(0, 0, 0);
+}
+
+.text {
+  font-size: 24px;
+}
+
+.synopsis {
+  font-size: 16px;
+}
+
+.genres {
+  font-size: 20px;
+}
+
+.title {
+  font-size: 24px;
+  display: block;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.text,
+.synopsis,
+.genres {
+  display: none;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.mySlides:hover .text,
+.mySlides:hover .synopsis,
+.mySlides:hover .genres {
+  transition: 0.3s ease all;
+  visibility: visible;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+hr.rounded {
+  border-top: 3px solid #fff;
+  border-radius: 5px;
+  size: 10px;
+}
+
+.trending {
+  color: #fff;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+  padding: 5px;
+}
+
+#imageRedirection {
+  cursor: pointer;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: flex;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+}

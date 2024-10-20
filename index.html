@@ -1,19 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animelio</title>
-    <link
-      rel="icon"
-      href="https://github.com/Nohanime/Animelio/blob/main/logo%20melio.png?raw=true"
-    />
+    <link rel="icon" href="./images/logo melio.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/carrousel.css" />
   </head>
 
   <body>
-    <header></header>
-    <main></main>
+    <header>
+      <div class="nav-left">
+        <img src="" alt="" />
+        <div class="nav-right">
+          <a href="https://anime-sama.fr/catalogue/">Catalogue</a>
+          <a href="#">VOSTFR</a>
+          <a href="#">VF</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="carousel">
+        <!-- SVG back-arrow -->
+        <button class="arrow back-arrow">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWxlZnQiPjxwYXRoIGQ9Im0xNSAxOC02LTYgNi02Ii8+PC9zdmc+"
+          />
+        </button>
+        <div class="slide left">
+          <div class="overlay"></div>
+          <div class="slide-info">
+            <img src="" />
+            <p>
+              Despite family's disapproval, Miguel dreams of music, magically
+              travels to the afterlife, embarks on adventures.
+            </p>
+          </div>
+          <img class="slide-bg" src="./images/demonslayer.jpg" />
+        </div>
+
+        <div class="slide showcase">
+          <div class="overlay"></div>
+          <div class="slide-info">
+            <img style="margin-bottom: -1rem" src="" />
+            <p>
+              Po, now a spiritual leader, seeks a successor and unravels
+              mysteries with a witty fox thief.
+            </p>
+          </div>
+          <img class="slide-bg" src="./images/jjk.jpg" />
+        </div>
+
+        <div class="slide left">
+          <div class="overlay"></div>
+          <div class="slide-info">
+            <img src="" />
+            <p>
+              Miles Morales, reuniting with Gwen Stacy, traverses the
+              Multiverse, clashing with other Spider-People over threats.
+            </p>
+          </div>
+          <img class="slide-bg" src="./images/shadows.jpg" />
+        </div>
+
+        <button class="arrow next-arrow">
+          <!-- SVG next-arrow -->
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLXJpZ2h0Ij48cGF0aCBkPSJtOSAxOCA2LTYtNi02Ii8+PC9zdmc+"
+          />
+        </button>
+      </div>
+    </main>
     <footer></footer>
   </body>
+
+  <script src="carrousel.js"></script>
 </html>

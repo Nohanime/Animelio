@@ -28,6 +28,7 @@
 }
 
 body {
+    min-height: 100vh;
     background-color: var(--background);
 }
 
@@ -68,7 +69,7 @@ header img {
 
 header a {
     text-transform: uppercase;
-    margin-right: 24px;
+    margin-left: 24px;
     font-size: 20px;
     color: var(--lien);
     text-decoration: none;
@@ -76,16 +77,20 @@ header a {
     transition: all 0.3s ease-in-out;
 }
 
-header a:last-child {
-    margin-right: 0;
+header a:first-child {
+    margin-left: 0;
 }
 
 header a:hover {
     color: var(--lien-hovered);
 }
 
+main {
+    padding: 24px 80px;
+}
+
 .carousel {
-    margin: 0 auto 0 auto;
+    margin-bottom: 40px;
 }
 
 .slide-info img {
@@ -94,10 +99,6 @@ header a:hover {
 
 .slide-bg {
     opacity: 80%;
-}
-
-.trendings {
-    padding: 40px 80px;
 }
 
 .trendings h2 {
@@ -109,6 +110,7 @@ header a:hover {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 16px;
+    margin-bottom: 40px;
 }
 
 .grid img {
@@ -124,6 +126,14 @@ header a:hover {
 .grid img:hover {
     opacity: 100%;
     transform: scale(1.1);
+}
+
+.subscribe {
+    text-align: center;
+}
+
+.subscribe h2 {
+    margin-bottom: 24px;
 }
 
 footer {
@@ -200,4 +210,15 @@ hr {
 }
 
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .trendings {
+        padding: 12px 40px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 16px;
+    }
+}

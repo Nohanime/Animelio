@@ -301,10 +301,4 @@ hr {
             Transform: scale(1.1);
         }
     }
-
-    .nav-left {
-        clip-path: circle(40%);
-    }
-
-
 }

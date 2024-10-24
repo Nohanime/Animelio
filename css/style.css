@@ -25,6 +25,10 @@
     --transparent: transparent;
 }
 
+html {
+    Scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     min-height: 100vh;
@@ -60,13 +64,10 @@ header {
 
 .nav-left {
     margin-right: auto;
-}
-
-.nav-left {
     border-radius: 100%;
     object-fit: cover;
     overflow: hidden;
-    box-shadow: 0 0 62px rgba(120, 68, 229, .8);
+    box-shadow: 0 0 64px rgba(120, 68, 229, .8);
     transition: all 0.3s ease-in-out;
 }
 
@@ -75,7 +76,7 @@ header {
 }
 
 header img {
-    width: 62px;
+    width: 64px;
     object-fit: cover;
 }
 
@@ -276,5 +277,34 @@ hr {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(12, 1fr);
     }
+
+    .grid img:hover {
+        opacity: 80%;
+        transform: scale(1);
+    }
+
+    .grid img {
+        animation: opacity ease-in-out;
+        animation-timeline: view();
+        animation-range-start: contain 0%;
+        animation-range-end: contain 50%;
+    }
+
+    @keyframes opacity {
+        0% {
+            Opacity: 80%;
+            Transform: scale(1);
+        }
+
+        100% {
+            Opacity: 100%;
+            Transform: scale(1.1);
+        }
+    }
+
+    .nav-left {
+        clip-path: circle(40%);
+    }
+
 
 }

@@ -1,147 +1,148 @@
 @import url(normalize.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
-    --width: 90vw;
+  --width: 90vw;
 }
 
 .carousel {
-    aspect-ratio: 16/9;
-    width: var(--width);
-    position: relative;
-    border-radius: 16px;
-    box-shadow: 0px 4px 14px -2px rgba(120, 68, 229, 0.8);
-    overflow: hidden;
+  aspect-ratio: 16/9;
+  width: var(--width);
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0px 4px 14px -2px rgba(120, 68, 229, 0.8);
+  overflow: hidden;
 }
 
 .arrow {
-    position: absolute;
-    top: 50%;
-    background: none;
-    border: none;
-    width: 4rem;
-    z-index: 2;
-    transition: all ease 0.3s;
+  position: absolute;
+  top: 50%;
+  background: none;
+  border: none;
+  width: 4rem;
+  z-index: 2;
+  transition: all ease 0.3s;
 }
 
 .arrow:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
-.arrow>img {
-    transition: all 0.3s ease-in-out;
+.arrow > img {
+  transition: all 0.3s ease-in-out;
 }
 
 .back-arrow {
-    left: 0;
+  left: 0;
 }
 
-.back-arrow:hover>img {
-    transform: translateX(-30%) scale(1.4);
+.back-arrow:hover > img {
+  transform: translateX(-30%) scale(1.4);
 }
 
 .next-arrow {
-    right: 0;
+  right: 0;
 }
 
-.next-arrow:hover>img {
-    transform: translateX(30%) scale(1.4);
+.next-arrow:hover > img {
+  transform: translateX(30%) scale(1.4);
 }
 
 .slide:not(.showcase) {
-    width: 0;
+  width: 0;
 }
 
 .showcase {
-    left: 0;
-    width: 100%;
+  left: 0;
+  width: 100%;
 }
 
 .left {
-    left: 0;
+  left: 0;
 }
 
 .right {
-    left: 100%;
+  left: 100%;
 }
 
 .slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    overflow: hidden;
-    transition: all ease-in-out var(--duration);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: all ease-in-out var(--duration);
 }
 
 .overlay {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg,
-            rgba(120, 68, 229, .4) 0%,
-            rgba(120, 68, 229, 0) 15%);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(120, 68, 229, 0.4) 0%,
+    rgba(120, 68, 229, 0) 15%
+  );
 }
 
 .slide-info {
-    position: absolute;
-    bottom: 1rem;
-    left: 2rem;
-    width: 20rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    color: #fff;
-    z-index: 2;
-    transition: all ease-in-out var(--duration);
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  width: 20rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: #fff;
+  z-index: 2;
+  transition: all ease-in-out var(--duration);
 }
 
-.slide:not(.showcase)>.slide-info {
-    opacity: 0;
+.slide:not(.showcase) > .slide-info {
+  opacity: 0;
 }
 
-.slide-info>img {
-    width: 12rem;
+.slide-info > img {
+  width: 12rem;
 }
 
-.slide-info>button {
-    padding: 0.4rem 1rem;
-    width: 10rem;
-    border: 0px;
-    border-radius: 0.4rem;
-    font-size: 1.1rem;
-    font-weight: bold;
+.slide-info > button {
+  padding: 0.5rem 1rem;
+  width: 10rem;
+  border: 0px;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-.slide-info>p {
-    text-wrap: wrap;
+.slide-info > p {
+  text-wrap: wrap;
 }
 
 .slide-bg {
-    position: relative;
-    width: var(--width);
-    left: 50%;
-    transform: translatex(-50%);
-    margin: 0;
+  position: relative;
+  width: var(--width);
+  left: 50%;
+  transform: translatex(-50%);
+  margin: 0;
 }
 
 @media only screen and (max-width: 768px) {
+  .slide-info > img {
+    width: 6rem;
+  }
 
-    .slide-info>img {
-        width: 6rem;
-    }
-
-    .slide-info>button {
-        font-size: 0.6rem;
-    }
+  .slide-info > button {
+    font-size: 0.5rem;
+  }
 }
